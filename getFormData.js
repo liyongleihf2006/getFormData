@@ -35,6 +35,6 @@ function getFormData($form){
 * */
 function fileFormData($form,data){
     Object.keys(data).forEach(function (key) {
-        $("[name=" + key + "]",$form).val(data[key].split(","));
+        $("[name=" + key + "]",$form).val((data[key]+"").split(","));
     });
 }
